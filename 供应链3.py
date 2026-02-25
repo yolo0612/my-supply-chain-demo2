@@ -8,6 +8,13 @@ import os
 import plotly.graph_objects as go
 from datetime import datetime, timedelta
 from openai import OpenAI
+import streamlit as st
+
+# 简单的密码验证
+password = st.text_input("请输入访问密码", type="password")
+if password != "my_secret_123":
+    st.error("密码错误，无法查看数据")
+    st.stop() # 停止运行下面的代码
 
 # --- 1. 配置 ---
 # 尝试使用 SiliconFlow 的免费 Qwen 模型
@@ -258,4 +265,5 @@ if len(event.selection.rows) > 0:
 
 
 conn.close()
+
 
