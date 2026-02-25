@@ -151,7 +151,7 @@ generate_massive_data()
 conn = init_db()
 
 # 侧边栏：全局控制
-st.sidebar.title("🕹️ 控制台")
+st.sidebar.title("🕹️ 控制台（v1.0）")
 st.sidebar.caption(f"管理 SKU 总数: {SKU_COUNT:,}")
 
 # 筛选器
@@ -255,5 +255,6 @@ if len(event.selection.rows) > 0:
                 """, unsafe_allow_html=True)
         else:
             result_placeholder.info("👈 点击按钮，获取基于当前模拟场景的补货、调拨与促销建议。")
+
 
 conn.close()
