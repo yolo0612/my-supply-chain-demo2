@@ -151,7 +151,7 @@ generate_massive_data()
 conn = init_db()
 
 # 侧边栏：全局控制
-st.sidebar.title("🕹️ 控制台（v1.0）")
+st.sidebar.title("🕹️ 控制台")
 st.sidebar.caption(f"管理 SKU 总数: {SKU_COUNT:,}")
 
 # 筛选器
@@ -159,7 +159,7 @@ filter_risk = st.sidebar.selectbox("筛选风险等级", ["全部", "High (断�
 demand_shock = st.sidebar.slider("模拟需求波动", 0.5, 2.0, 1.2, help="模拟市场需求突然变化")
 
 # 主标题
-st.title("🚀 供应链全景控制塔")
+st.title("🚀 供应链全景控制塔（v1.0）")
 st.markdown("像 Kinaxis 一样：**实时感知，即时模拟，智能决策**")
 
 # 1. 顶部 KPI 卡片
@@ -258,3 +258,4 @@ if len(event.selection.rows) > 0:
 
 
 conn.close()
+
